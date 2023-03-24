@@ -1,0 +1,15 @@
+--->Import packages for the following projects are as follows:
+*BYTES - provides function for working with slices of bytes or to split the transaction data
+*crypto/sha256 - provides a function for computing the sha256 hash of byte slice and also used to compute
+*hex - provides for encoding and decoding hexadecimal string
+*fmt - formatting and printing output
+--->Input file is taken into the account and suitable error is given if any encountered 
+--->First converts transaction from hex to byte slices the data read from the file is a series of hexadecimal
+    strings with each string representing a single transaction which uses "bytes.Split" 
+--->Construction of "MERKLE TREE" the code then constructs the tree from the transaction data using the function
+    The function takes a list of byte slices, which in this case is the list of transactions converted in the previous step. 
+    The function constructs a binary Merkle tree by first creating leaf nodes for each transaction, then iteratively constructing parent 
+    nodes by hashing pairs of child nodes together until only a single root node remains.
+--->finally the "fmt.Println" function prints the Merkle Tree root hash for the following file.
+ 
+
